@@ -21,14 +21,14 @@ export default function DesktopAgenda() {
   }, "[start] auto");
   // start R0 R1 R2 R3 S
 
-function parseTime(time: Date) {
-  return time.toLocaleTimeString("en-US", {
-    hour: "2-digit",
-    minute: "2-digit",
-    hour12: false,
-    timeZone: "Asia/Taipei",
-  });
-}
+  function parseTime(time: Date) {
+    return time.toLocaleTimeString("en-US", {
+      hour: "2-digit",
+      minute: "2-digit",
+      hour12: false,
+      timeZone: "Asia/Taipei",
+    });
+  }
 
   const times = data.sessions
     .map((session) => [session.start, session.end])
